@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:  linear-gradient(135deg, #ae259f, #ff6f61, #f9d423, #00f2fe);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+  }
+
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Emoji + message sortant en bande dessinée */
+  .emoji-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer; /* pour indiquer clic possible */
+  }
+
+  .emoji {
+    font-size: 150px;
+    animation: pulse 2s infinite alternate;
+    cursor: pointer;
+  }
+
+  .emoji span {
+    max-width: 20px;
+  }
+
+  @keyframes pulse {
+    from { transform: scale(1) rotate(0deg); filter: brightness(1); }
+    to { transform: scale(1.05) rotate(2deg); filter: brightness(1.2); }
+  }
+
+  /* Bande avec message qui sort de la bouche */
+  .dialog {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cloud {
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-size: 1.4em;
+    font-weight: bold;
+    max-width: 250px;
+    text-align: center;
+    cursor: pointer;
+    animation: bounce 2s infinite alternate;
+  }
+
+  .pointer {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+  }
+
+  /* Barre de défilement "Bienvenue" - initialement cachée */
+  #scrolling {
+    display: none;
+    margin-top: 40px;
+    width: 80%;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    font-size: 2em;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255,255,255,0.7);
+    /* Animation de montée arriver avec effet cool */
+    animation: slideIn 1s forwards;
+  }
+
+  /* animation pour la barre de défilé quand elle apparaît */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* défilement du texte à l'intérieur */
+  #scrolling span {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: slide 10s linear infinite;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }

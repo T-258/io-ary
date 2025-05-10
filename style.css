@@ -1,0 +1,1074 @@
+/* Import de polices si besoin */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Déclaration des couleurs dans :root */
+:root {
+  --color-background: #03071e; /* Gris foncé */
+  --color-accent:#d00000; /* Jaune */
+  --color-text: #32261e; /* Blanc */
+  --color-muted: #0e0a01; /* Gris clair (optionnel) */
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: nones;
+  box-sizing: border-box;
+  font-family: 'Comic Relief', system-ui, sans-serif;
+}
+
+
+body {
+    z-index: -999;
+  overflow: hidden;
+  opacity: 0.8;
+  background-image: url("./gradient-wavy-background_23-2149115558.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+    width: 100%;
+    min-height: 200%;
+}
+.entete {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  line-height: 80px;
+  z-index: 111;
+}
+   
+
+.logo {
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    animation: changeColor 4s infinite;
+}
+
+b  {   
+        font-size: 5rem;
+        color: #000000; /* Jaune vif */
+        animation: blink 1s ease-in-out infinite alternate;
+      }
+      
+      /* Animation du point */
+   @keyframes blink {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+          text-shadow: 0 0 0px transparent;
+        }
+        100% {
+          transform: scale(1.3);
+          opacity: 0.7;
+          text-shadow: 0 0 8px #facc15;
+        }
+    }
+
+    @keyframes changeColor {
+        0% { color:#17153b; }
+        25% { color:#433d8b; }
+        50% { color:palevioletred; }
+        75% { color:#2e236c; }
+        100% { color:#ae445a; }
+      }
+      /*eto no misy any borde de deffillement any coder*/
+
+   /*   .logo {.animated-border {
+  font-size: 3rem;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #0000ff, #ff0000);
+  background-size: 400%;
+  border-radius: 10px;
+  z-index: -1;
+  animation: borderMove 4s linear infinite;
+}
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+        font-size: 3rem;
+        padding: 10px 20px;
+        position: relative;
+        display: inline-block;
+        border: 4px solid transparent;
+        border-radius: 10px;
+        z-index: 1;
+      }
+      
+      .logo:before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        background: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #0000ff, #ff0000);
+        background-size: 400%;
+        border-radius: 10px;
+        z-index: -1;
+        animation: borderMove 4s linear infinite;
+      }
+      
+      @keyframes borderMove {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+      }
+ eto no mifarana ny code ny border de defilement any codeur*/  
+      
+
+
+.logo span {
+    color:var(--color-accent);
+}
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a{
+    font-size: 30px;
+    color:var(--color-muted);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.menu li:hover a {
+    color: var(--color-accent);
+}
+
+.reseaux a{
+    font-size: 50px;
+    color: var(--color-muted);
+    margin:25px 10px ;
+    margin-top: 1px;
+}
+.reseaux a:hover {
+    color: var(--color-accent);
+}
+
+.corps {
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow:hidden ;
+}
+
+h1 {
+    display: block;
+    font-size: 3em;
+    font-weight: 900;
+    color: var(--color-muted);
+}
+
+p {
+    display: block;
+    width: 90%;
+    font-size: 1.8em;
+    text-align: justify;
+    color: var(--color-background);
+}
+
+.Cgauche,  .Cdroit {
+    width:50%;
+}/*textb*/
+
+.Cgauche {
+    z-index: none;
+    padding: 20px;
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+}
+.corps .icon img{
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.4;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: obliqueMove 10s ease-in-out infinite;
+
+  }
+  @keyframes obliqueMove {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(50px, -50px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  /*image 3*/
+
+  .corps .ibon img {
+
+    position: absolute;
+    top: 30%;
+    left: 900px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.4;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: petite 10s ease-in-out infinite;
+
+
+
+  }
+
+@keyframes petite {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(90px, -90px); }
+  100% { transform: translate(0, 0); }
+}
+
+.corps .acon img {
+
+    position: absolute;
+    top: 20%;
+    left: 300px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.6;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: petite 10s ease-in-out infinite;
+
+  }
+
+@keyframes petite {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(90px, -90px); }
+  100% { transform: translate(0, 0); }
+}
+
+
+
+.textb {
+    display:block;
+    position: relative;
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: var(--color-background);    
+}
+
+.textb::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: var(--color-accent);  
+}
+
+.boutton {
+    width: 100%;
+    position: relative;
+    left: 50px;
+}
+
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: var(--color-muted);
+    color:#ffffff;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+    color: var(--color-accent);
+}
+
+#teddy{
+    color: rgb(223, 9, 77);
+}
+
+.groupImg {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 50px; 
+  }
+  
+  .groupImg img {
+    width: 500px;   
+    height: auto;   
+    max-width: 100%; 
+    right: 60px;
+  }
+
+  .groupImg img:nth-child(2) {
+    position: relative;
+    top: -30px;     
+    left: 20px;     
+    width: auto;   
+    animation: moveUp 5s linear infinite;
+  }
+
+  .groupImg img:nth-child(1) {
+    position: relative;
+    top: 50px;     
+    left: 40px;    
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;   
+    animation: moveDown 5s linear infinite;
+  }
+  
+  
+
+ /* @keyframes teddy {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(30px); }
+    100% { transform: translateX(0); }
+  }*/
+
+.groupImg #idspl {
+    position: absolute;
+    top: 25%;
+    left: 53%;
+    width: 900px;
+    height: 900px;
+    opacity: 0.8;
+    transform: translate(-20%, 20%) rotate(-30deg);
+    filter: saturate(100%);
+
+}
+
+.groupImg #akino {
+    z-index: 10px;
+    opacity: 1.0;
+    max-height: 1300px;
+    max-width: 1300px;
+    top: -40px;
+}
+
+/**/
+
+@keyframes moveUp {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes moveDown {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+  }
+
+  /*.corps::before {
+    position: absolute;
+    content: ".";
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background:linear gardient (45deg, #ffe800,pink );
+    left: 35%;
+    top: 15%;
+    animation: beforeAnime 6s linear infinite;
+  }
+
+  @keyframes beforeAnime {
+    50%{
+          left: -13%;
+          top: 40%;
+    }
+  }
+    */
+   
+
+    /*MEDIA QUERY*/
+
+    @media (max-width: 768px) {
+        .entete {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          line-height: normal;
+          text-align: center;
+        }
+      
+        .container {
+          min-height: 100vh;
+        }
+      
+        body {
+          background-size: cover;
+          background-position: top;
+          overflow: auto;
+        }
+      }
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 30px; 
+    letter-spacing: 1px; 
+  }
+
+  .logo b {
+    font-size: 3rem; 
+  }
+
+  /* Ajuster la taille de la barre de navigation (menu) */
+  .entete {
+    flex-direction: column; /* Mettre les éléments du menu en colonne */
+    align-items: center; /* Centrer les éléments */
+    height: auto; /* Ajuster la hauteur */
+  }
+
+  
+  .corps {
+    padding: 20px;
+  }
+  .groupImg img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+ /* Pour les appareils de petite taille (smartphones) */
+@media screen and (max-width: 768px) {
+    .entete {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu li a {
+        font-size: 24px;
+    }
+
+    .reseaux a {
+        font-size: 40px;
+        margin: 15px 5px;
+    }
+
+    .corps {
+        flex-direction: column;
+        padding: 0 5%;
+        height: auto;
+    }
+
+    .corps .icon img {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .boutton button {
+        font-size: 18px;
+        padding: 12px 18px;
+        margin: 10px 0;
+    }
+}
+ /* Pour les appareils très petits (mobiles) */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .menu li a {
+        font-size: 20px;
+    }
+
+    .reseaux a {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .corps {
+        padding: 0 2%;
+        height: auto;
+    }
+
+    .corps .icon img {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .boutton button {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin: 8px 0;
+    }
+}
+ /* Les éléments Cgauche et Cdroit */
+.Cgauche, .Cdroit {
+    width: 50%;
+}
+
+/* Cgauche : partie gauche du corps */
+.Cgauche {
+    z-index: none;
+    padding: 20px;
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation pour l'image avec l'animation oblique */
+ .corps .icon img {
+    position: absolute;
+    top: 30%;
+    left: -100px;
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.4;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: obliqueMove 10s ease-in-out infinite;
+}
+
+@keyframes obliqueMove {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(50px, -50px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Animation pour la deuxième image */
+.corps .ibon img {
+    position: absolute;
+    top: 30%;
+    left: 900px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.4;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: petite 10s ease-in-out infinite;
+}
+
+@keyframes petite {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(90px, -90px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Responsive: Ajustements pour les écrans plus petits (tablettes, mobiles) */
+@media screen and (max-width: 768px) {
+    /* Réduire la taille des images pour qu'elles s'ajustent mieux */
+    .corps .icon img, .corps .ibon img {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* Réduire l'espace entre les images et ajuster l'animation */
+    .corps .icon img {
+        top: 40%;
+       left: -80px;
+    }
+
+    .corps .ibon img {
+        top: 40%;
+        left: 200px;
+    }
+
+    /* Ajuster la taille de la section .Cgauche */
+    .Cgauche {
+        width: 90%; /* Réduire la largeur de la section sur petits écrans */
+    }
+
+    /* Réduire l'animation pour les petits écrans */
+    @keyframes obliqueMove {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(20px, -20px); }
+        100% { transform: translate(0, 0); }
+    }
+
+    @keyframes petite {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(40px, -40px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+/* Pour les très petits écrans (mobiles de 480px ou moins) */
+@media screen and (max-width: 480px) {
+    /* Encore plus petite taille des images */
+    .corps .icon img, .corps .ibon img {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Ajuster les positions pour qu'elles prennent moins de place */
+    .corps .icon img {
+        top: 50%;
+        left: -60px;
+    }
+
+    .corps .ibon img {
+        top: 50%;
+        left: 150px;
+    }
+
+    /* Ajuster l'animation pour les petits écrans */
+    @keyframes obliqueMove {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(15px, -15px); }
+       100% { transform: translate(0, 0); }
+    }
+
+    @keyframes petite {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(30px, -30px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+ /* Animation pour l'image 3 */
+.corps .ibon img {
+    position: absolute;
+    top: 30%;
+    left: 900px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.4;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: petite 10s ease-in-out infinite;
+}
+
+@keyframes petite {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(90px, -90px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Animation pour l'image 4 (acon) */
+.corps .acon img {
+    position: absolute;
+    top: 20%;
+    left: 300px;
+    width: 300px;
+    height: 300px;
+    opacity: 0.6;
+    border-radius: 50%;
+    border: -5px solid transparent;
+    z-index: -999; /* en arrière */
+    animation: petite 10s ease-in-out infinite;
+}
+
+@keyframes petite {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(90px, -90px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Style pour le texte b */
+.textb {
+    display: block;
+    position: relative;
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: var(--color-background);    
+}
+
+.textb::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: var(--color-accent);  
+}
+
+/* Bouton */
+.boutton {
+    width: 100%;
+    position: relative;
+    left: 50px;
+}
+
+/* Responsive: Ajustements pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+    /* Réduire la taille des images pour qu'elles s'ajustent mieux */
+.corps .ibon img, .corps .acon img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Ajuster la position des images */
+    .corps .ibon img {
+        top: 40%;
+        left: 400px;
+    }
+
+    .corps .acon img {
+        top: 20%;
+        left: 100px;
+    }
+
+    /* Ajuster les tailles de police pour les petits écrans */
+    .textb {
+        font-size: 30px;
+    }
+
+    .textb::after {
+        width: 35px; /* Réduire la taille de la barre sous le texte */
+    }
+
+    /* Ajuster la largeur du bouton */
+    .boutton {
+        left: 20px;
+    }
+
+    /* Ajuster les animations pour qu'elles soient plus légères sur petits écrans */
+    @keyframes petite {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(40px, -40px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+/* **Responsive pour les très petits écrans (mobiles en portrait) */
+@media screen and (max-width: 480px) {
+    /* Encore plus petites images pour les très petits écrans */
+    .corps .ibon img, .corps .acon img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Ajuster la position des images pour les écrans de taille très petite */
+    .corps .ibon img {
+        top: 50%;
+        left: 300px;
+    }
+
+    .corps .acon img {
+        top: 30%;
+        left: 50px;
+    }
+/* Réduire encore plus la taille de la police du texte */
+    .textb {
+        font-size: 25px;
+    }
+
+    /* Ajuster la taille de la barre sous le texte */
+    .textb::after {
+        width: 25px;
+    }
+
+    /* Boutons plus petits et ajustés */
+    .boutton {
+        left: 10px;
+    }
+
+    /* Animation légère sur les petits écrans */
+    @keyframes petite {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(20px, -20px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+ /* Boutons */
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: var(--color-muted);
+    color: #ffffff;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: var(--color-accent);
+}
+
+/* Style spécifique pour teddy */
+#teddy {
+    color: rgb(223, 9, 77);
+}
+
+/* Section .groupImg */
+.groupImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 50px; 
+}
+
+.groupImg img {
+    width: 500px;   
+    height: auto;   
+    max-width: 100%; 
+    right: 60px;
+}
+
+/* Animation pour les images */
+.groupImg img:nth-child(2) {
+    position: relative;
+    top: -30px;     
+    left: 20px;     
+    width: auto;   
+    animation: moveUp 5s linear infinite;
+}
+
+.groupImg img:nth-child(1) {
+    position: relative;
+    top: 50px;     
+    left: 40px;    
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;   
+    animation: moveDown 5s linear infinite;
+}
+
+/* Responsive: Adaptation pour les petits écrans (mobiles) */
+@media screen and (max-width: 768px) {
+    /* Réduire la taille des boutons sur les petits écrans */
+    button {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    /* Réduire la taille de l'image et ajuster sa position */
+    .groupImg img {
+        width: 350px; /* Réduire la largeur des images */
+        height: auto; 
+    }
+
+    /* Ajuster la position des images pour les petits écrans */
+    .groupImg img:nth-child(1) {
+        width: 300px; /* Réduire l'image 1 */
+        height: 300px; /* Réduire l'image 1 */
+        top: 30px; /* Ajuster la position */
+    }
+
+    .groupImg img:nth-child(2) {
+        width: 300px; /* Réduire l'image 2 */
+         height: 300px; /* Réduire l'image 2 */
+        top: -20px; /* Ajuster la position */
+    }
+
+    /* Adapter l'animation pour les petits écrans (réduire le mouvement) */
+    @keyframes moveUp {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(20px, -20px); }
+        100% { transform: translate(0, 0); }
+    }
+
+    @keyframes moveDown {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(20px, 20px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+/* Responsive: Adaptation pour les très petits écrans (mobiles en portrait) */
+@media screen and (max-width: 480px) {
+    /* Boutons encore plus petits pour les très petits écrans */
+    button {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    /* Ajustement des images sur des écrans encore plus petits */
+    .groupImg img {
+        width: 250px; /* Réduire encore plus les images */
+        height: auto;
+    }
+
+    .groupImg img:nth-child(1) {
+        width: 200px; /* Réduire l'image 1 */
+        height: 200px; /* Réduire l'image 1 */
+    }
+
+    .groupImg img:nth-child(2) {
+        width: 200px; /* Réduire l'image 2 */
+        height: 200px; /* Réduire l'image 2 */
+    }
+
+    /* Ajustement des animations pour les très petits écrans */
+ @keyframes moveUp {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(10px, -10px); }
+        100% { transform: translate(0, 0); }
+    }
+
+    @keyframes moveDown {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(10px, 10px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+.groupImg #idspl {
+    position: absolute;
+    top: 25%;
+    left: 53%;
+    width: 900px;
+    height: 900px;
+    opacity: 0.8;
+    transform: translate(-20%, 20%) rotate(-30deg);
+    filter: saturate(100%);
+}
+
+.groupImg #akino {
+    z-index: 10px;
+    opacity: 1.0;
+    max-height: 1300px;
+    max-width: 1300px;
+    top: -40px;
+}
+
+/* Animation des images */
+@keyframes moveUp {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes moveDown {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive: Adaptation pour les petits écrans (mobiles) */
+@media screen and (max-width: 768px) {
+
+    /* Ajuster l'image #idspl pour les petits écrans */
+    .groupImg #idspl {
+        width: 500px;  /* Réduire la taille de l'image */
+        height: 500px;
+        top: 30%;      /* Ajuster la position */
+        left: 50%;     /* Centrer horizontalement */
+        transform: translate(-50%, 20%) rotate(-30deg); /* Centrer correctement */
+    }
+
+    /* Ajuster l'image #akino pour les petits écrans */
+    .groupImg #akino {
+        max-height: 800px;
+        max-width: 800px;
+        top: 0;
+    }
+
+    /* Ajuster l'animation pour les petits écrans */
+    @keyframes moveUp {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    @keyframes moveDown {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(10px); }
+        100% { transform: translateY(0); }
+    }
+}
+
+/* Responsive: Adaptation pour les très petits écrans (mobiles en portrait) */
+@media screen and (max-width: 480px) {
+
+    /* Réduire encore plus la taille de l'image #idspl */
+    .groupImg #idspl {
+        width: 350px;  /* Réduire l'image pour les très petits écrans */
+        height: 350px;
+        top: 40%;      /* Ajuster la position */
+        left: 50%;     /* Centrer horizontalement */
+        transform: translate(-50%, 20%) rotate(-30deg);
+    }
+
+    /* Réduire la taille de l'image #akino */
+    .groupImg #akino {
+        max-height: 600px;
+        max-width: 600px;
+        top: 0;
+    }
+
+    /* Réduire l'animation des images pour les très petits écrans */
+    @keyframes moveUp {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
+    }
+
+    @keyframes moveDown {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(5px); }
+        100% { transform: translateY(0); }
+    }
+}
